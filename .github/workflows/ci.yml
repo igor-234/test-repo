@@ -1,0 +1,14 @@
+name: CI # Проверка кода
+
+on: [push] # Запуск при любом пуше
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Проверка структуры
+        run: |
+          echo "Репозиторий склонирован. Содержимое:"
+          ls -la
